@@ -1,7 +1,7 @@
 {
-  "name": "ikth-v11-ssrwebpack-psql-auth0-2022",
+  "name": "03react-webpack-template",
   "version": "1.0.0",
-  "description": "version11: webpack SSR / react-router / postresql (heroku version) / Auth0 / docker-compose / typescript / nodejs / expressjs",
+  "description": "",
   "private": true,
   "scripts": {
     "ikupdate": "npm i && npm update && npm audit fix --force && npm outdated",
@@ -14,40 +14,32 @@
     "ikcleanci": "rm -fr node_modules/ dist/ && npm cache clean -vf && npm ci && npm run dev"
   },
   "keywords": [],
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/RechadSalma/ikth-v11-ssrwebpack-psql-auth0-2022.git"
-  },
-
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/RechadSalma/ikth-v11-ssrwebpack-psql-auth0-2022/issues"
-  },
-  "homepage": "https://github.com/RechadSalma/ikth-v11-ssrwebpack-psql-auth0-2022#readme",
   "devDependencies": {
     "@babel/core": "^7.15.8",
     "@babel/preset-env": "^7.15.8",
     "@babel/preset-react": "^7.14.5",
     "@pmmmwh/react-refresh-webpack-plugin": "^0.5.4",
     "babel-loader": "^8.2.2",
-    "css-loader": "^6.4.0",
+    "css-loader": "^6.7.0",
     "css-minimizer-webpack-plugin": "^3.1.1",
-    "eslint": "^8.0.1",
-    "eslint-plugin-react": "^7.26.1",
+    "eslint": "^8.10.0",
+    "eslint-plugin-react": "^7.29.3",
     "handlebars-loader": "^1.7.1",
     "html-webpack-plugin": "^5.4.0",
-    "mini-css-extract-plugin": "^2.4.2",
-    "postcss": "^8.3.9",
+    "mini-css-extract-plugin": "^2.6.0",
+    "postcss": "^8.4.8",
     "postcss-loader": "^6.2.0",
-    "postcss-preset-env": "^7.2.0",
+    "postcss-preset-env": "^7.4.2",
     "react-refresh": "^0.11.0",
     "style-loader": "^3.3.0",
-    "webpack": "^5.59.0",
+    "webpack": "^5.70.0",
     "webpack-cli": "^4.9.1",
     "webpack-dev-server": "^4.3.1"
   },
   "dependencies": {
+    "axios": "^0.26.0",
     "handlebars": "^4.7.7",
     "react": "^17.0.1",
     "react-dom": "^17.0.1"

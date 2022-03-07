@@ -2,41 +2,35 @@
 -version11: webpack SSR / react-router / postresql (heroku version) / Auth0 / docker-compose / typescript / nodejs / expressjs
 
 ================ LEFT OFF 20220220
--
+-use docker
+	-create Dockerfile first
+
 ================ DONE
-
-================ TODO
--test out possible new vsc extensions
-	-iK write on word doc too if it is a keeper
-	-Settings sync
-	-turbo console log
-	-Javascript Booster
-	-Code spell checker
-	-Peacock
-	-Path Intellisense
-	-Project manager
-	-Metago
-	-Rest client
-	-Code time
-	-Better comments
-	-Auto rename tag
-
 -check for any outdated modules & update if any
 
--convert webpack into SSR		//this will detemine if I can use ssr webpack for upcoming PERN bug tracker project
+-FAIL- convert webpack into SSR		//this will detemine if I can use ssr webpack for upcoming PERN bug tracker project
 	-check online to see how to do it & follow their steps if need be
+	-CANNOT BE DONE EASILY SO I CHANGE TO CSR
 
+-create fullstack directory
+	-create frontend & ensure everything is working
+	-create backend & ensure everything is working
+
+-create a simple request for the frontend to collect from the backend
+
+================ TODO
 -use docker
 	-create Dockerfile first
 	-create docker-compose.yml file
+	-test if the request call is working according for fullstack
 
 -create Github Actions to deploy on your heroku account
 	-ensure everything is working accordingly
 
--test out for nodejs server api route before react client (*) route & see if nodejs route works as normal
+-SKIP- test out for nodejs server api route before react client (*) route & see if nodejs route works as normal
 	-iK you are just seeing if it works otherwise move onto the next step
 
--use react-router			//this must work if I want to use ssr webpack for upcoming PERN bug tracker project
+-SKIP- use react-router			//this must work if I want to use ssr webpack for upcoming PERN bug tracker project
 	-create a quick simple route & see if the route works using webpack SSR
 		-decide what steps you should take next depending on the result
 
@@ -62,6 +56,8 @@
 -do remaining WRITE IN YOUR NOTE DOC
 
 -check if repo name needs changing
+	- ikth-v11-ssrwebpack-psql-auth0-2022
+		to ikth-v11-fs-csrwebpack-psql-auth0-2022
 
 -README.md file
 
@@ -74,6 +70,7 @@
 ================ WRITE IN YOUR NOTE DOC
 
 ================ NOTE TO SELF
+-webpack ssr is tricky to do so I left it & will probaby use next.js for ssr from now on
 
 ================ MISSION
 version11: webpack SSR / react-router / postresql (heroku version) / Auth0 / docker-compose / typescript / nodejs / 

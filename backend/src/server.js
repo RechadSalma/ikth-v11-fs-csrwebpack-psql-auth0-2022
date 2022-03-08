@@ -1,3 +1,5 @@
+require("dotenv").config();
+
 const express = require("express");
 const morgan = require("morgan");
 const cors = require("cors");
@@ -6,38 +8,12 @@ const app = express();
 app.use(morgan("dev"));
 app.use(express.urlencoded({ extended: true }));
 
-//whtielist
-// const corsOptions = {
-//   origin: "http://localhost:9000",
-//   // optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
-// };
-// const whitelist = [
-// "http://localhost:9000",
-// "http://localhost:3000",
-//   "https://ikth-v11-frontend.herokuapp.com/",
-// ];
-// const corsOptions = {
-//   origin: function (origin, callback) {
-//     if (whitelist.indexOf(origin) !== -1) {
-//       callback(null, true);
-//     } else {
-//       callback(new Error("Not allowed by CORS"));
-//     }
-//   },
-// };
-
-// const corsOptions = {
-//   origin: "https://ikth-v11-frontend.herokuapp.com",
-//   optionsSuccessStatus: 200, // some legacy browsers (IE11, various SmartTVs) choke on 204
-// };
-
-// app.use(cors(corsOptions));
-
 const allowlist = [
   "https://ikth-v11-frontend.herokuapp.com",
   "http://example2.com",
   "http://localhost:3000",
 ];
+
 const corsOptionsDelegate = function (req, callback) {
   let corsOptions;
   if (allowlist.indexOf(req.header("Origin")) !== -1) {

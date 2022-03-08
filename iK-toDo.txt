@@ -2,8 +2,10 @@
 -version11: webpack SSR / react-router / postresql (heroku version) / Auth0 / docker-compose / typescript / nodejs / expressjs
 
 ================ LEFT OFF 20220220
--use docker
-	-create Dockerfile first
+-test out postgreSQL			//this must work if I want to use upcoming project PERN bug tracker 
+	-set up using your local psql & install the necessary library
+		-CCC currently checking online guide to see how to do it
+			-already install pg but now need to connect to localhost before I use heroku psql
 
 ================ DONE
 -check for any outdated modules & update if any
@@ -23,7 +25,6 @@
 	-create docker-compose.yml file
 	-test if the request call is working according for fullstack
 
-================ TODO
 -create Github Actions to deploy on your heroku account
 	-ensure everything is working accordingly
 
@@ -34,6 +35,7 @@
 	-create a quick simple route & see if the route works using webpack SSR
 		-decide what steps you should take next depending on the result
 
+================ TODO
 -test out postgreSQL			//this must work if I want to use upcoming project PERN bug tracker 
 	-set up using your local psql & install the necessary library
 	-test with some simple SQL CRUD

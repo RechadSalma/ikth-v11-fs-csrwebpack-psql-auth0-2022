@@ -18,12 +18,12 @@
 
 -create a simple request for the frontend to collect from the backend
 
-================ TODO
 -use docker
 	-create Dockerfile first
 	-create docker-compose.yml file
 	-test if the request call is working according for fullstack
 
+================ TODO
 -create Github Actions to deploy on your heroku account
 	-ensure everything is working accordingly
 
@@ -46,6 +46,7 @@
 	-setup & test out on dev server
 	-commit to heroku & see if it works on live site
 
+-uncomment cors function so that only select domain can access your server
 
 -do remaining COME BACK
 

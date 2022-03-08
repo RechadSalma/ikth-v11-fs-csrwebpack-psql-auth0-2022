@@ -3,9 +3,7 @@ import React from "react";
 import RequestButton from "./components/RequestButton.js";
 
 // /*iK simple App setup */
-const App = (props) => {
-  console.log(props);
-
+const App = () => {
   return (
     <div className="AppComponent">
       <RequestButton />

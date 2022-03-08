@@ -42,4 +42,4 @@ jobs:
           email: ${{ secrets.HEROKU_EMAIL }} # your heroku email
           api_key: ${{ secrets.HEROKU_API_KEY }} # your  heroku api key
           docker_compose_file: './docker-compose.yml' # set the path to the folder where the docker-compose file is located
-          heroku_apps: '[{"imagename":"ikth-v11-fs-csrwebpack-psql-auth0-2022_ikfrontend","appname":"ikfrontend","apptype":"web"},{"imagename":"ikth-v11-fs-csrwebpack-psql-auth0-2022_ikbackend","appname":"ikbackend","apptype":"worker"}]' # List of Docker Image name, Heroku app and Heroku app type
+          heroku_apps: '[{"imagename":"ikth-v11-fs-csrwebpack-psql-auth0-2022_ikfrontend","appname":"ikth-v11","apptype":"web"},{"imagename":"ikth-v11-fs-csrwebpack-psql-auth0-2022_ikbackend","appname":"ikth-v11","apptype":"worker"}]' # List of Docker Image name, Heroku app and Heroku app type

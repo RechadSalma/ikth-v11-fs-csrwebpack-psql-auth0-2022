@@ -26,7 +26,7 @@ app.use(express.urlencoded({ extended: true }));
 //   },
 // };
 
-var corsOptions = {
+const corsOptions = {
   origin: "https://ikth-v11-frontend.herokuapp.com/",
   optionsSuccessStatus: 200, // some legacy browsers (IE11, various SmartTVs) choke on 204
 };

@@ -14,7 +14,7 @@ app.use(express.urlencoded({ extended: true }));
 const whitelist = [
   "http://localhost:9000",
   "http://localhost:3000",
-  "https://ikth-v11-backend.herokuapp.com/",
+  "https://ikth-v11-frontend.herokuapp.com/",
 ];
 const corsOptions = {
   origin: function (origin, callback) {

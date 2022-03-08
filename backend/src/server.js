@@ -26,12 +26,29 @@ app.use(express.urlencoded({ extended: true }));
 //   },
 // };
 
-const corsOptions = {
-  origin: "https://ikth-v11-frontend.herokuapp.com",
-  optionsSuccessStatus: 200, // some legacy browsers (IE11, various SmartTVs) choke on 204
-};
+// const corsOptions = {
+//   origin: "https://ikth-v11-frontend.herokuapp.com",
+//   optionsSuccessStatus: 200, // some legacy browsers (IE11, various SmartTVs) choke on 204
+// };
 
 // app.use(cors(corsOptions));
+
+const allowlist = [
+  "https://ikth-v11-frontend.herokuapp.com",
+  "http://example2.com",
+  "http://localhost:3000",
+];
+const corsOptionsDelegate = function (req, callback) {
+  let corsOptions;
+  if (allowlist.indexOf(req.header("Origin")) !== -1) {
+    corsOptions = { origin: true }; // reflect (enable) the requested origin in the CORS response
+  } else {
+    corsOptions = { origin: false }; // disable CORS for this request
+  }
+  callback(null, corsOptions); // callback expects two parameters: error and options
+};
+
+app.use(cors(corsOptions));
 
 //routes
 app.get("/", (req, res) => {
@@ -40,7 +57,7 @@ app.get("/", (req, res) => {
 
 const data = { iKname: "rechad kheerdali", dob: 19441111 };
 
-app.get("/api", cors(corsOptions), (req, res) => {
+app.get("/api", (req, res) => {
   res.json(data).status(200);
 });
 

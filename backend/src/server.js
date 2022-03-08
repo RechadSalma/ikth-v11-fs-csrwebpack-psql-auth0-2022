@@ -12,8 +12,8 @@ app.use(express.urlencoded({ extended: true }));
 //   // optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
 // };
 const whitelist = [
-  "http://localhost:9000",
-  "http://localhost:3000",
+  // "http://localhost:9000",
+  // "http://localhost:3000",
   "https://ikth-v11-frontend.herokuapp.com/",
 ];
 const corsOptions = {

@@ -3,7 +3,9 @@ import axios from "axios";
 
 export default function RequestButton() {
   const axiosClick = () => {
-    axios.get("http://localhost:4000/api").then((res) => console.log(res.data));
+    axios
+      .get("https://ikth-v11-backend.herokuapp.com/api")
+      .then((res) => console.log(res.data));
   };
 
   return (

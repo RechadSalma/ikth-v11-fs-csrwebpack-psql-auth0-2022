@@ -5,6 +5,9 @@ const morgan = require("morgan");
 const cors = require("cors");
 
 const app = express();
+const dummyroute = require("./routes/dummyroute.js");
+const dbRoute = require("./routes/dbRoute.js");
+
 app.use(morgan("dev"));
 app.use(express.urlencoded({ extended: true }));
 
@@ -31,11 +34,9 @@ app.get("/", (req, res) => {
   res.send("iK server is working");
 });
 
-const data = { iKname: "rechad kheerdali", dob: 19441111 };
+app.use("/dummyroute", dummyroute);
 
-app.get("/api", (req, res) => {
-  res.json(data).status(200);
-});
+app.use("/db", dbRoute);
 
 const port = process.env.PORT || 4000;
 app.listen(port, () =>

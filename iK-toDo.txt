@@ -3,9 +3,7 @@
 
 ================ LEFT OFF 20220220
 -test out postgreSQL			//this must work if I want to use upcoming project PERN bug tracker 
-	-set up using your local psql & install the necessary library
-		-CCC currently checking online guide to see how to do it
-			-already install pg but now need to connect to localhost before I use heroku psql
+	-now configure psql using heroku version of PSQL
 
 ================ DONE
 -check for any outdated modules & update if any
@@ -89,5 +87,4 @@ version11: webpack SSR / react-router / postresql (heroku version) / Auth0 / doc
 - use Auth0 library too if you can
 
 ================ PLAYGROUND
-
 

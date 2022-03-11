@@ -2,8 +2,10 @@
 -version11: webpack SSR / react-router / postresql (heroku version) / Auth0 / docker-compose / typescript / nodejs / expressjs
 
 ================ LEFT OFF 20220220
--test out postgreSQL			//this must work if I want to use upcoming project PERN bug tracker 
-	-now configure psql using heroku version of PSQL
+-test out Auth0 library
+	-sign up to Auth0
+		-CCC I already signup to Auth0 but need to place the info within both em word doc
+			-info is below in the PLAYGROUND section
 
 ================ DONE
 -check for any outdated modules & update if any
@@ -33,7 +35,8 @@
 	-create a quick simple route & see if the route works using webpack SSR
 		-decide what steps you should take next depending on the result
 
-================ TODO
+-install webpack dotenv so that you can easily switch between localhost & real url for fetching
+
 -test out postgreSQL			//this must work if I want to use upcoming project PERN bug tracker 
 	-set up using your local psql & install the necessary library
 	-test with some simple SQL CRUD
@@ -42,7 +45,9 @@
 	-now configure psql using heroku version of PSQL
 	-see if it works on heroku live site
 
+================ TODO
 -test out Auth0 library
+	-sign up to Auth0
 	-setup & test out on dev server
 	-commit to heroku & see if it works on live site
 
@@ -87,4 +92,8 @@ version11: webpack SSR / react-router / postresql (heroku version) / Auth0 / doc
 - use Auth0 library too if you can
 
 ================ PLAYGROUND
+
+https://auth0.com/
+oAuthUsed: google,
+oAuthEmail: rechadsalma123@gmail.com,
 

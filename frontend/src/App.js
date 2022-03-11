@@ -4,6 +4,8 @@ import RequestButton from "./components/RequestButton.js";
 
 // /*iK simple App setup */
 const App = () => {
+  console.log(process.env.NODE_ENV);
+
   return (
     <div className="AppComponent">
       <RequestButton />

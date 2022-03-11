@@ -15,6 +15,7 @@ const allowlist = [
   "https://ikth-v11-frontend.herokuapp.com",
   "http://example2.com",
   "http://localhost:3000",
+  "http://localhost:9000",
 ];
 
 const corsOptionsDelegate = function (req, callback) {

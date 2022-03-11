@@ -8,7 +8,7 @@ function errdb() {
 }
 
 exports.queryTable = (req, res) => {
-  db.query("SELECT * FROM iktable;")
+  db.query("SELECT * FROM iktest2;")
     .then((response) => {
       console.log(response);
       res.json(response.rows);

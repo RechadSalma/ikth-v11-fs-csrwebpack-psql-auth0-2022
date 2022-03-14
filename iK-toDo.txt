@@ -3,9 +3,9 @@
 
 ================ LEFT OFF 20220220
 -test out Auth0 library
-	-sign up to Auth0
-		-CCC I already signup to Auth0 but need to place the info within both em word doc
-			-info is below in the PLAYGROUND section
+	-CCC finish this but check for any leftovers, such as routes in check
+
+-uncomment cors function so that only select domain can access your server
 
 ================ DONE
 -check for any outdated modules & update if any
@@ -45,7 +45,6 @@
 	-now configure psql using heroku version of PSQL
 	-see if it works on heroku live site
 
-================ TODO
 -test out Auth0 library
 	-sign up to Auth0
 	-setup & test out on dev server
@@ -54,6 +53,7 @@
 	-reset routes for SS & CS & decide which method to go best with
 	-commit to heroku & see if it works on live site
 
+================ TODO
 -uncomment cors function so that only select domain can access your server
 
 -do remaining COME BACK

@@ -8,7 +8,7 @@ export default function RequestButton() {
       : "http://localhost:4000";
 
   const axiosClick = () => {
-    axios.get(`${backendUrl}/db`).then((res) => console.log(res.data));
+    axios.get(`${backendUrl}/login`).then((res) => console.log(res.data));
   };
 
   return (

@@ -13,20 +13,28 @@ import ReactDOM from "react-dom";
 // import axios from 'axios';
 // import DOMPurify from 'dompurify';
 
+import { Auth0Provider } from "@auth0/auth0-react";
+
 /*To listen to any unhandled promise rejections (no catch handler?)
 +\ you probably remove it afterwards if you think you do not need it. */
 window.addEventListener("unhandledrejection", function (event) {
-    console.warn("iK unhandledrejection (promise): ", event.promise);
-    console.warn("iK unhandledrejection (reason): ", event.reason);
+  console.warn("iK unhandledrejection (promise): ", event.promise);
+  console.warn("iK unhandledrejection (reason): ", event.reason);
 });
 
 /*iK React with not redux store */
 /*IK you could set up react context api if needed */
 ReactDOM.render(
+  <Auth0Provider
+    domain="dev-4-jkyr2v.us.auth0.com"
+    clientId="6IIm0c3aeUx1OzZxGapMJ4FOAUXS4DVq"
+    redirectUri={window.location.origin}
+  >
     <React.StrictMode>
-        <App />
-    </React.StrictMode>,
-    document.getElementById("root")
+      <App />
+    </React.StrictMode>
+  </Auth0Provider>,
+  document.getElementById("root")
 ); /*END ReactDOM.render() */
 
 /*iK using React-Redux */

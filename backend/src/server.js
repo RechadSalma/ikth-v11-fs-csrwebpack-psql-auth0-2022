@@ -3,6 +3,7 @@ require("dotenv").config();
 const express = require("express");
 const morgan = require("morgan");
 const cors = require("cors");
+const { auth, requiresAuth } = require("express-openid-connect");
 
 const app = express();
 const dummyroute = require("./routes/dummyroute.js");
@@ -13,7 +14,6 @@ app.use(express.urlencoded({ extended: true }));
 
 const allowlist = [
   "https://ikth-v11-frontend.herokuapp.com",
-  "http://example2.com",
   "http://localhost:3000",
   "http://localhost:9000",
 ];
@@ -30,9 +30,32 @@ const corsOptionsDelegate = function (req, callback) {
 
 app.use(cors(corsOptionsDelegate));
 
+// Auth0 config
+const config = {
+  authRequired: false,
+  auth0Logout: true,
+  secret: "a long, randomly-generated string stored in env",
+  baseURL: "http://localhost:4000",
+  clientID: "kzJbtMIsJFSkiIOqVquLj0Tm6eMt531z",
+  issuerBaseURL: "https://dev-4-jkyr2v.us.auth0.com",
+};
+
+// auth router attaches /login, /logout, and /callback routes to the baseURL
+app.use(auth(config));
+
+// req.isAuthenticated is provided from the auth router
+// app.get('/', (req, res) => {
+//   res.send(req.oidc.isAuthenticated() ? 'Logged in' : 'Logged out');
+// });
+
 //routes
 app.get("/", (req, res) => {
-  res.send("iK server is working");
+  // res.send("iK server is working");
+  res.send(req.oidc.isAuthenticated() ? "Logged in" : "Logged out");
+});
+
+app.get("/profile", requiresAuth(), (req, res) => {
+  res.send(JSON.stringify(req.oidc.user));
 });
 
 app.use("/dummyroute", dummyroute);

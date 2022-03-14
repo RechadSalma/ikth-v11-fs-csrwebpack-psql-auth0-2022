@@ -49,6 +49,9 @@
 -test out Auth0 library
 	-sign up to Auth0
 	-setup & test out on dev server
+		-testing auth0 on serverside
+		-testing auth0 on client side
+	-reset routes for SS & CS & decide which method to go best with
 	-commit to heroku & see if it works on live site
 
 -uncomment cors function so that only select domain can access your server
@@ -92,8 +95,4 @@ version11: webpack SSR / react-router / postresql (heroku version) / Auth0 / doc
 - use Auth0 library too if you can
 
 ================ PLAYGROUND
-
-https://auth0.com/
-oAuthUsed: google,
-oAuthEmail: rechadsalma123@gmail.com,
 

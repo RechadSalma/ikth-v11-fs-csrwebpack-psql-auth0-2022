@@ -9,7 +9,7 @@ import Profile from "./components/Profile.js";
 
 // /*iK simple App setup */
 const App = () => {
-  console.log(process.env.NODE_ENV);
+  // console.log(process.env.NODE_ENV);
 
   return (
     <div className="AppComponent">

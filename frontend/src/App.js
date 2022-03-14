@@ -3,8 +3,8 @@ import React from "react";
 import RequestButton from "./components/RequestButton.js";
 
 // Auth0
-import LoginButton from "./components/login.js";
-import LogoutButton from "./components/logout.js";
+import LoginButton from "./components/Login.js";
+import LogoutButton from "./components/Logout.js";
 import Profile from "./components/Profile.js";
 
 // /*iK simple App setup */

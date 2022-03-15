@@ -12,6 +12,7 @@ const dbRoute = require("./routes/dbRoute.js");
 app.use(morgan("dev"));
 app.use(express.urlencoded({ extended: true }));
 
+// allow cors route to the server
 const allowlist = [
   "https://ikth-v11-frontend.herokuapp.com",
   "http://localhost:3000",
@@ -43,23 +44,20 @@ const config = {
 // auth router attaches /login, /logout, and /callback routes to the baseURL
 app.use(auth(config));
 
-// req.isAuthenticated is provided from the auth router
-// app.get('/', (req, res) => {
-//   res.send(req.oidc.isAuthenticated() ? 'Logged in' : 'Logged out');
-// });
-
 //routes
 app.get("/", (req, res) => {
   // res.send("iK server is working");
   res.send(req.oidc.isAuthenticated() ? "Logged in" : "Logged out");
 });
 
+//Using Auth0 authentication middleware to confirm if user is logged in or not
 app.get("/profile", requiresAuth(), (req, res) => {
   res.send(JSON.stringify(req.oidc.user));
 });
 
 app.use("/dummyroute", dummyroute);
 
+//psql route which will access psql heroku psal database
 app.use("/db", dbRoute);
 
 const port = process.env.PORT || 4000;

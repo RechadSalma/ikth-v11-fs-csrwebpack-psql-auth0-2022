@@ -1,11 +1,7 @@
-20220304 - ikth-v11-ssrwebpack-psql-auth0-2022
--version11: webpack SSR / react-router / postresql (heroku version) / Auth0 / docker-compose / typescript / nodejs / expressjs
+20220304 - ikth-v11-fs-csrwebpack-psql-auth0-2022
+version11: fullstack / Postresql (heroku version) / Auth0 / webpack react frontend / express backend / docker-compose
 
 ================ LEFT OFF 20220220
--test out Auth0 library
-	-CCC finish this but check for any leftovers, such as routes in check
-
--uncomment cors function so that only select domain can access your server
 
 ================ DONE
 -check for any outdated modules & update if any
@@ -53,7 +49,6 @@
 	-reset routes for SS & CS & decide which method to go best with
 	-commit to heroku & see if it works on live site
 
-================ TODO
 -uncomment cors function so that only select domain can access your server
 
 -do remaining COME BACK
@@ -70,6 +65,7 @@
 
 -README.md file
 
+================ TODO
 -git commit & see deploy build was a success
 
 ================ COME BACK
@@ -81,8 +77,13 @@
 ================ NOTE TO SELF
 -webpack ssr is tricky to do so I left it & will probaby use next.js for ssr from now on
 
+-use the recommended setup from the npm pg documentation as it is generally more simple
+
+-psql database will not work if you do not setup .env variables to connect to heroku psql database
+
 ================ MISSION
-version11: webpack SSR / react-router / postresql (heroku version) / Auth0 / docker-compose / typescript / nodejs / 
+version11: fullstack / Postresql (heroku version) / Auth0 / webpack react frontend / express backend / docker-compose
+
 - test out webpack SSR
 
 - test a simple full stack app on heroku using docker-compose & ensure it is fetching data as it should
@@ -96,3 +97,5 @@ version11: webpack SSR / react-router / postresql (heroku version) / Auth0 / doc
 
 ================ PLAYGROUND
 
+iktesting@gmail.com
+iKtesting123@

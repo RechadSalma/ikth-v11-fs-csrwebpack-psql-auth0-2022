@@ -8,13 +8,13 @@ export default function RequestButton() {
       : "http://localhost:4000";
 
   const axiosClick = () => {
-    axios.get(`${backendUrl}/login`).then((res) => console.log(res.data));
+    axios.get(`${backendUrl}/db`).then((res) => console.log(res.data));
   };
 
   return (
     <div>
-      <h1>iK request button is working</h1>
-      <button onClick={axiosClick}>make axios request</button>
+      <h1>iK request button to Heroku psql database</h1>
+      <button onClick={axiosClick}>SELECT * FROM iktest2;</button>
     </div>
   );
 }

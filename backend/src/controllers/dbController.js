@@ -1,5 +1,6 @@
 const db = require("../database/index.js");
 
+//got this online but not sure where to use it yet
 function errdb() {
   db.on("error", (err, client) => {
     console.error("Unexpected error on idle client", err);
@@ -7,6 +8,7 @@ function errdb() {
   });
 }
 
+//able to execute sql commands on the heroku psql database
 exports.queryTable = (req, res) => {
   db.query("SELECT * FROM iktest2;")
     .then((response) => {

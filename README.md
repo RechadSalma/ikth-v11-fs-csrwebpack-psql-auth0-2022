@@ -7,7 +7,7 @@
 - you will need to set up .env for backend psql (heroku) database connection for `/db` route
 - BIM Auth0 login will work as long as you have not dismiss their application on your account
 - frontend has only home route
-- backend has multiple routes: `/` , `/db`, `/dummyroute` , `/profile`
+- backend has multiple routes: `/` , `/db`, `/dummyroute` , `/profile`, `/login`, `/logout`
 
 ## Status
 
